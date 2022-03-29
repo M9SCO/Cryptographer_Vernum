@@ -21,8 +21,7 @@ public class Utils {
     public static String create_key(int length) {
 
         StringBuilder buf = new StringBuilder();
-        for (int i = 0; i < (Math.min(length, 256)); i++) buf.append(random() > 0.5 ? "1" : "0");
-
+        for (int i = 0; i<length; i++) buf.append(random() > 0.5 ? "1" : "0");
         return buf.toString();
     }
 }
